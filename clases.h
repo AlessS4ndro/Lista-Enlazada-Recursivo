@@ -27,14 +27,16 @@ struct NodeDouble
 template <typename T>
 class ListLink
 {
-  NodeSimple<T> *head;
   NodeSimple<T> *tail;
   int size;
-  NodeSimple<T> * recorrido(int ,NodeSimple<T> *);
+
   void iniciar(T);
 public:
   ListLink():head(NULL),tail(NULL),size(0){}
   ~ListLink(){}
+  NodeSimple<T> *head;
+  NodeSimple<T> ** recorrido(int ,NodeSimple<T> **);
+  void aumentar(){size++;}
   void push_back(T );
   void push_front(T);
   T pop_back();
